@@ -1,4 +1,48 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+/* --- STYLES FOR ALL PAGES --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* Font */
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: block;
+  
+}
+
+html {
+  /* Positioning */
+  position: relative;
+
+  /* Box-model */
+  min-height: 100%;
+}
+
+#wholeNav{
+  height: 25%;
+}
+
+.box {
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.container{
+  width: 100%;
+}
+
+/* Fit the box*/
+/*.content{
+  box-sizing: content-box;
+}
+*/
+
+#logo1 {
+  height: 25%;
+  margin: 0 auto;
+  width: 50%;
+
+}
+
+#box1{
+  height: 200px;
 }
