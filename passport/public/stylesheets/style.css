@@ -27,7 +27,9 @@ body {
   margin: 0 auto;
 }
 
-
+#box1{
+  min-height: 200px;
+}
 
 
 #wholeNav{
@@ -45,6 +47,14 @@ body {
   width:30%
 }
 
+.albums{
+  display: flex;
+  flex-direction: column;
+}
+
+.albumArt img{
+  width: 100%;
+}
 
 /* Fit the box*/
 /*.content{
@@ -55,6 +65,4 @@ body {
 
 
 
-#box1{
-  height: 200px;
-}
+
