@@ -1,7 +1,5 @@
 /* --- STYLES FOR ALL PAGES --- */
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   /* Font */
@@ -10,25 +8,43 @@ body {
   
 }
 
-html {
+/*html {
   /* Positioning */
-  position: relative;
+  /*position: relative;
 
   /* Box-model */
-  min-height: 100%;
+ /* min-height: 100%;
 }
-
-#wholeNav{
-  height: 25%;
-}
+*/
 
 .box {
   box-shadow: 2px 2px 4px #000000;
 }
 
 .container{
+  height: 100%;
   width: 100%;
+  margin: 0 auto;
 }
+
+
+
+
+#wholeNav{
+  position: sticky;
+  top: 0;
+  height: 10%;
+  width: 100%;
+  z-index: 401;
+  overflow: hidden;
+}
+
+#brand{
+  position: static;
+  margin:0 auto;
+  width:30%
+}
+
 
 /* Fit the box*/
 /*.content{
@@ -36,12 +52,8 @@ html {
 }
 */
 
-#logo1 {
-  height: 25%;
-  margin: 0 auto;
-  width: 50%;
 
-}
+
 
 #box1{
   height: 200px;
