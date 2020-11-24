@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     const Playlist_content = sequelize.define("playlist_content", {
-        song_start: {
+        song_start_ms: {
             type: DataTypes.INT,
             allowNull: false,
         }
