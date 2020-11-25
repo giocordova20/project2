@@ -1,4 +1,68 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+/* --- STYLES FOR ALL PAGES --- */
+
+
+body {
+  /* Font */
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: block;
+  
 }
+
+/*html {
+  /* Positioning */
+  /*position: relative;
+
+  /* Box-model */
+ /* min-height: 100%;
+}
+*/
+
+.box {
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#box1{
+  min-height: 200px;
+}
+
+
+#wholeNav{
+  position: sticky;
+  top: 0;
+  height: 10%;
+  width: 100%;
+  z-index: 401;
+  overflow: hidden;
+}
+
+#brand{
+  position: static;
+  margin:0 auto;
+  width:30%
+}
+
+.albums{
+  display: flex;
+  flex-direction: column;
+}
+
+.albumArt img{
+  width: 100%;
+}
+
+/* Fit the box*/
+/*.content{
+  box-sizing: content-box;
+}
+*/
+
+
+
+
+
