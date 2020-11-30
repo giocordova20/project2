@@ -31,7 +31,7 @@ const generateRandomString = function(length) {
 app.get('/login', function(req, res) {
     const state = generateRandomString(16);
     res.cookie(stateKey, state);
-  
+    console.log("Clicked");
     // your application requests authorization
     const scope = 'user-read-private user-read-email';
     res.redirect('https://accounts.spotify.com/authorize?' +
