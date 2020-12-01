@@ -6,19 +6,16 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    Playlist_content.associate = function (models) {
-        Playlist_content.belongsTo(models.Playlist, {
+/*    Playlist_content.associate = function (models) {
+        Playlist_content.belongsTo(Playlists, {
+            as: 'playlist',
             foreignKey: {
                 allowNull: false
-            }
+            },
+            constraints: false
         });
 
-        Playlist_content.belongsTo(models.Song, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    }
+    }*/
 
     return Playlist_content;
 };
