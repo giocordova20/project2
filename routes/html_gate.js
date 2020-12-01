@@ -6,4 +6,3 @@ what need is a
 listener event -- to the input of the user 
 */
 
-alert("hello world");
