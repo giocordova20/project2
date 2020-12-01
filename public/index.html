@@ -15,14 +15,14 @@
         <!--container-->
         <div id="container1" class="container">
            
-                    <a class="navbar-brand" id="brand" href="#">
-                        <img id="logo1" class="logo" src="./assets/ShotifyLogo2.jpg" height="55" width="100" alt="Shotify logo1" loading="lazy">
-                    </a>
-              
+            <a class="navbar-brand" id="brand" href="#">
+                <img id="logo1" class="logo" src="./assets/ShotifyLogo2.jpg" height="55" width="100" alt="Shotify logo1" loading="lazy">
+            </a>
+          
+            <button id="show-modal" type="button" class="button">Shotify</button>
+
         </div>
         <!--/container1-->
-        <button id="show-modal" type="button" class="btn btn-primary">Primary</button>
-
     </nav>
     <!--/wholeNav-->
 
@@ -54,7 +54,7 @@
                 <h6 id="HD2" class="smallHD"><strong>Search for songs:</strong></h6>
                     <form class="form-inline my-2 my-lg-0" id="js-search-form">
                         <input class="form-control mr-sm-2" for="search" type="search" id="js-search-input" placeholder="Search" aria-label="Search" >
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button class="button" type="submit">Search</button>
                     </form>
             </div>
 
@@ -149,7 +149,9 @@
             </div>
             <p>Please enter your date of birth</p>
             <form id="dob">
-                <input type="month" id="bdaymonth" name="bdaymonth" max="12" min="01" placeholder="00">
+                <input type="date" name="begin" 
+                placeholder="dd-mm-yyyy" value=""
+                min="1997-01-01" max="2030-12-31">
                 <button id="submit1">Submit</button>
               </form>
         </div>
@@ -158,5 +160,6 @@
 
     
     <script type="text/javascript" src="./js/modal.js"></script>
+    <script type src="../routes/html_gate.js"></script>
 </body>
 </html>
