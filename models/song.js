@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       genre: {
-        type: DataTypes.INT
+        type: DataTypes.INTEGER
       }
     });
   

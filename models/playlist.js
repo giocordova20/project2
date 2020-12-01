@@ -8,10 +8,10 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       genre: {
-        type: DataTypes.INT
+        type: DataTypes.INTEGER
       },
       drink: {
-          type: DataTypes.INT
+          type: DataTypes.INTEGER
       },
       explicit: {
           type: DataTypes.BOOLEAN
