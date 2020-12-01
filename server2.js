@@ -111,8 +111,8 @@ require("./routes/spotify_api")(app);
 
 
 
-// console.log('Listening on http://localhost:'+'8888');
-// app.listen(8888);
+ //console.log('Listening on http://localhost:'+'8888');
+ //app.listen(8888);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
