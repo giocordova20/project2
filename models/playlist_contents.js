@@ -1,24 +1,21 @@
 module.exports = function (sequelize, DataTypes) {
     const Playlist_content = sequelize.define("playlist_content", {
         song_start_ms: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
         }
     });
 
-    Playlist_content.associate = function (models) {
-        Playlist_content.belongsTo(models.Playlist, {
+/*    Playlist_content.associate = function (models) {
+        Playlist_content.belongsTo(Playlists, {
+            as: 'playlist',
             foreignKey: {
                 allowNull: false
-            }
+            },
+            constraints: false
         });
 
-        Playlist_content.belongsTo(models.Song, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    }
+    }*/
 
     return Playlist_content;
 };

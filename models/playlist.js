@@ -8,10 +8,10 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       genre: {
-        type: DataTypes.INT
+        type: DataTypes.INTEGER
       },
       drink: {
-          type: DataTypes.INT
+          type: DataTypes.INTEGER
       },
       explicit: {
           type: DataTypes.BOOLEAN
@@ -19,11 +19,12 @@ module.exports = function(sequelize, DataTypes) {
     });
   
     Playlist.associate = function(models) {
-        Playlist.hasMany(models.Playlist_content, {
+        Playlist.hasMany(models.playlist_content, {
+          as: 'Playlist_content',
+          foreignKey: 'playlistId',
           onDelete: "cascade"
         });
     }
   
     return Playlist;
   };
-  
