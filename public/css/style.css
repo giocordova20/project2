@@ -65,5 +65,56 @@ body {
 
 
 
+/* Modal */
+.modal{
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--hidden{
+  display: none;
+}
+
+.modal__close-bar{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -2rem;
+  margin-top: -1rem;
+  cursor: pointer;
+}
+
+.modal__contents {
+  background-color: rgb(214, 100, 100);
+  padding: 2rem 4rem;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: .5rem;
+}
+
+#submit1{
+  width: 100%;
+  padding:  .5rem;
+  background-color: blueviolet;
+  border: none;
+  color: #fff;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+#submit1:hover {
+  background-color: blue;
+}
+
+/* ../modal */
+
+
 
 

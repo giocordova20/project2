@@ -21,6 +21,8 @@
               
         </div>
         <!--/container1-->
+        <button id="show-modal" type="button" class="btn btn-primary">Primary</button>
+
     </nav>
     <!--/wholeNav-->
 
@@ -139,8 +141,22 @@
     <!--/box3-->
 
 
-    <!--modal-->
+    <!--MODAL-->
+    <div class="modal modal--hidden">
+        <div class="modal__contents">
+            <div class="modal__close-bar">
+                <span>X</span>
+            </div>
+            <p>Please enter your date of birth</p>
+            <form id="dob">
+                <input type="month" id="bdaymonth" name="bdaymonth" max="12" min="01" placeholder="00">
+                <button id="submit1">Submit</button>
+              </form>
+        </div>
+    </div>
+    <!--/MODAL-->
+
     
-    
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 </html>
