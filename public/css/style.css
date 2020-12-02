@@ -129,6 +129,25 @@ body {
   width:30%
 }
 
+.button{
+  background-color: blueviolet;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  transition: all .3s ease;
+  cursor: pointer;
+  height: 2.3rem;
+  width: 5rem;
+}
+.button:hover{
+  background-color: blue;
+}
+
+#show-modal{
+  align-items: flex-end;
+  
+}
+
 .albums{
   display: flex;
   flex-direction: column;
@@ -144,6 +163,60 @@ body {
 }
 */
 
+
+
+/* Modal */
+.modal{
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--hidden{
+  display: none;
+}
+
+.modal__close-bar{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -2rem;
+  margin-top: -1rem;
+  cursor: pointer;
+}
+
+.modal__contents {
+  background-color: #fff;
+  padding: 2rem 4rem;
+  border-radius: 10px;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+#submit1{
+  width: 100%;
+  padding:  .5rem;
+  background-color: blueviolet;
+  border: none;
+  color: #fff;
+  transition: all .3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#submit1:hover {
+  background-color: blue;
+}
+
+/* ../modal */
 
 
 
