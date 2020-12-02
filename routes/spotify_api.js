@@ -63,4 +63,24 @@ module.exports = function(app, err) {
     )
   
   });
+
+  app.get("/spotify/track/:search", function (req, res) {
+    spotifyApi.searchTracks(req.params.search)
+        .then(function (data) {
+            res.json(data.body.tracks.items[0]);
+        }, function (err) {
+            console.error(err);
+        });
+});
+
+/*app.get("/spotify/me", function (req, res) {
+
+  spotifyApi.getMe()
+  .then(function(data) {
+    console.log('Some information about the authenticated user', data.body);
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+});*/
+
 };
