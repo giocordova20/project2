@@ -19,13 +19,11 @@ const toggleModalTimer = () => {
               toggleModal();
             }
         
-          }, 1000);
+        }, 1000);
     }
 
-
-
 };
-
+/*
 //timer
 var timeleft = 100;
 function setTime() {
@@ -40,7 +38,9 @@ function setTime() {
   
     }, 1000);
 }
+*/
 
+/*
 // when timer ends
 function sendMessage() {
     if(timer.textContent = " "){
@@ -52,12 +52,14 @@ function sendMessage() {
     }
   
 }
+*/
 
+/*
 const time = 0.9;
 function modalPopup(){
     ageMessage.textContent = ageMessage
 };
-
+*/
 
 
 
