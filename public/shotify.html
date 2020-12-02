@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shotify</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/shotifyCSS.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./css/timerstyle.css"/>
+    <link rel="stylesheet" href="./css/shotifyCSS.css">
+
 </head>
 
 <body>
@@ -112,6 +114,56 @@
                 id
                 quos. Quo eos illum numquam in molestiae architecto sint, sunt libero.
             </p>
+            <div class="container">
+                <div class="timer">
+                  <div class="controls">
+                    <div class="time">
+                      <div id="minutes">60</div>
+                      <div id="seconds">00</div>
+                    </div>
+                    <div class="buttons">
+                      <button aria-label="play" id="play">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                      </button>
+                      <button aria-label="pause" id="pause">
+                        <i class="fa fa-pause" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>      
+                <!-- Modal -->
+                <div class="modal fade" id="shotify-over" tabindex="-1" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-center" id="exampleModalCenterTitle">Shot!fy</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h5 class="game-over">Thanks for Playing. Please call an Uber or Lyft.</h5>
+                    </div>
+                    <div class="modal-footer my-auto text-center">
+                        <div class="col-sm my-1">
+                          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <!------------------------->
+              </div>
+
+
+
+
+
+
+
+
         </section>
     </div>
     <div class="rect" id="blue"></div>
@@ -124,8 +176,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="js/navbar.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/timerscript.js"></script>
 </body>
 
 

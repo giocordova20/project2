@@ -37,7 +37,7 @@ function getFormattedSeconds() {
    getFormattedMinutes/Seconds() and the renderTime() function.
    It essentially resets our timer */
 function setTime() {
-  var minutes = .10;
+  var minutes = .05;
   clearInterval(interval);
   totalSeconds = minutes * 60;
 };
@@ -66,7 +66,7 @@ function startTimer() {
        secondsElapsed variable which is used to check if the time is up */
       interval = setInterval(function() {
         secondsElapsed++;
-        console.log(secondsElapsed) // ** Remove before saving // **
+        // console.log(secondsElapsed) // ** Remove before saving // **
 
         // renderTime() is called here once every second.
         renderTime();
