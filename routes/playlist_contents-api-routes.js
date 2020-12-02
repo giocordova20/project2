@@ -6,9 +6,6 @@ module.exports = function (app) {
         db.Playlist_content.findAll({
             where: {
                 id: req.params.playlistid,
-                include: [{
-                    model: db.Song
-                }]
             }
         }).then(function (response) {
             res.json(response);
