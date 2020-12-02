@@ -1,34 +1,87 @@
+
 $(document).ready(function(){
+    const today = moment();
+    currentDate = today.format("L");
+
+    console.log("    currentDate", currentDate)
+
+    var years = moment().diff('1981-01-01', 'years');  // Just to test moment
+    console.log("    years: ", years);
+    console.log("");
+
+    $("#submit1").on("click",function(){
+
+        let over21 = localStorage.getItem("over21");  // Get the over21 value form localStorage
+        let dateSelected = $("#dob").val();           // Get the inputed DOB from the modal input
+
+        console.log("    IN CHECKAGE localStorage", over21);
+        
+        setTimeout(showWindow,2000);
+        
+        console.log("    dateSelected:  ", dateSelected);
+
+        var userAge = 0;
+        userAge = moment().diff(dateSelected, 'years');
+
+        console.log("    Age of user: ", userAge);
+
+        // Check the over21 value from localStorage
+        if (over21 === "PARTY"){
+            $('#modalID').modal("hide");
+        }
+        else if(over21 === "NO PARTY"){
+            console.log("  You are under 21. Good bye!")
+
+            console.log("  NEED CODE TO DIRECT TO 60Second DJ Page");   // Delete this code after 60second page is built 
+            localStorage.setItem("over21", "PARTY");                    // Setting over21 to PARTY as a workaround for now
+            $('#modalID').modal("hide");
+            $('html body').css('overflow','visible'); // Open scroll
+
+            return
+        }
+        else if (age < 21){
+            localStorage.setItem("over21", "NO PARTY");
+            
+            $('#modalID').modal("hide");
+            $('html body').css('overflow','visible'); // Open scroll
+
+            return
+
+        }
+        else if (age >= 21){
+            console.log("    Your are 21 or Older. Welcome to the party!")
+            localStorage.setItem("over21", "PARTY");
 
 
+            $('#modalID').modal("hide");
+            $('html body').css('overflow','visible'); // Open scroll
 
+        }
+
+        return
+    });
+ 
+    // Show the Age Modal on page load
     function showWindow(){
-        $('#modalID').show();
-        // stop scroll
+        let over21 = localStorage.getItem("over21")
+        
+        // Don't show the modal if the over21 localStorage value is set to PARTY
+        if (over21 === "PARTY"){
+            console.log("    over21 IN SHOWWINDOW", over21);
+            return 
+        }
+        
+        // Lock the modal in place and stop scrolling
+        $('#modalID').modal({backdrop: 'static', keyboard: false});
         $('html body').css('overflow','hidden');
-    }
-    //showWindow()
 
-    function hideWindow(){
-        $('#modelID').hide();
-        // on scroll
-        $('html body').css('overflow','hidden');
-    }
-    //hideWindow();
-
+    };
 
    // call fuction after some time (2s)
    setTimeout(showWindow,2000);
 
 
-   $('#close-btn').click(function(){
-       hideWindow();
-   })
-
-
-
-
-})
+});
 
 
 
