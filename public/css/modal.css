@@ -8,11 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal--hidden{
     display: none;
   }
+  
   
   .modal__close-bar{
     display: flex;

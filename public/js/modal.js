@@ -1,72 +1,41 @@
-
-const toggleModal = () => {
-    document.querySelector('modal').classList.toggle('modal--hidden');
-
-
-}
+$(document).ready(function(){
 
 
 
-const toggleModalTimer = () => {
-    document.querySelector('.mTimer').classList.toggle('mTimer--hidden');
-    var modalTime = 1;
-    function setTime() {
-        var timerInterval = setInterval(function() {
-            modalTime--;
-        
-            if(timeleft === 0) {
-              clearInterval(timerInterval);
-              toggleModal();
-            }
-        
-        }, 1000);
+    function showWindow(){
+        $('#modalID').show();
+        // stop scroll
+        $('html body').css('overflow','hidden');
     }
+    //showWindow()
 
-};
-/*
-//timer
-var timeleft = 100;
-function setTime() {
-    var timerInterval = setInterval(function() {
-      timeleft--;
-      timer.textContent = timeleft + " seconds left till end of the Test.";
-  
-      if(timeleft === 0) {
-        clearInterval(timerInterval);
-        sendMessage();
-      }
-  
-    }, 1000);
-}
-*/
-
-/*
-// when timer ends
-function sendMessage() {
-    if(timer.textContent = " "){
-        var h1 = document.createElement("h1");
-  
-        h1.textContent = "GAME OVER"
-        timer.appendChild(h1); 
-        gameover();
+    function hideWindow(){
+        $('#modelID').hide();
+        // on scroll
+        $('html body').css('overflow','hidden');
     }
-  
-}
-*/
-
-/*
-const time = 0.9;
-function modalPopup(){
-    ageMessage.textContent = ageMessage
-};
-*/
+    //hideWindow();
 
 
+   // call fuction after some time (2s)
+   setTimeout(showWindow,2000);
+
+
+   $('#close-btn').click(function(){
+       hideWindow();
+   })
 
 
 
 
-/*// function to hide modal until button is push
+})
+
+
+
+
+
+
+// function to hide modal until button is push
 const toggleModal = () => {
     document.querySelector('.modal').classList.toggle('modal--hidden');
 };
@@ -83,6 +52,6 @@ document.querySelector('#dob').addEventListener('submit',(event) =>{
 // hide modal when click X
 document.querySelector('.modal__close-bar span')
 .addEventListener('click', toggleModal);
-*/
+
 
 
