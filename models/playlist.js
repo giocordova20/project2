@@ -15,6 +15,10 @@ module.exports = function(sequelize, DataTypes) {
       },
       explicit: {
           type: DataTypes.BOOLEAN
+      },
+      spotify_playlist_id: {
+        type: DataTypes.TEXT,
+        allowNull: false
       }
     });
   
