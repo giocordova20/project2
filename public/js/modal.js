@@ -12,7 +12,7 @@ $(document).ready(function(){
     function hideWindow(){
         $('#modelID').hide();
         // on scroll
-        $('html body').css('overflow','hidden');
+        $('html body').css('overflow','scroll');
     }
     //hideWindow();
 
