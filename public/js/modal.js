@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 
 
-
+/*
 
 // function to hide modal until button is push
 const toggleModal = () => {
@@ -52,6 +52,6 @@ document.querySelector('#dob').addEventListener('submit',(event) =>{
 // hide modal when click X
 document.querySelector('.modal__close-bar span')
 .addEventListener('click', toggleModal);
-
+*/
 
 
