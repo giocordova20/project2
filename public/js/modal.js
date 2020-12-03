@@ -3,9 +3,9 @@ $(document).ready(function(){
     const today = moment();
     currentDate = today.format("L");
 
-    console.log("    currentDate", currentDate)
+    console.log("    currentDate: ", currentDate)
 
-    var years = moment().diff('1981-01-01', 'years');  // Just to test moment
+    var years = moment().diff('1999-02-01', 'years');  // Just to test moment
     console.log("    years: ", years);
     console.log("");
 
@@ -13,14 +13,10 @@ $(document).ready(function(){
 
         let over21 = localStorage.getItem("over21");  // Get the over21 value form localStorage
         let dateSelected = $("#dob").val();           // Get the inputed DOB from the modal input
-
-        console.log("    IN CHECKAGE localStorage", over21);
         
         setTimeout(showWindow,2000);
         
-        console.log("    dateSelected:  ", dateSelected);
-
-        var userAge = 0;
+        let userAge = 0;
         userAge = moment().diff(dateSelected, 'years');
 
         console.log("    Age of user: ", userAge);
@@ -39,7 +35,7 @@ $(document).ready(function(){
 
             return
         }
-        else if (age < 21){
+        else if (userAge < 21){
             localStorage.setItem("over21", "NO PARTY");
             
             $('#modalID').modal("hide");
@@ -48,14 +44,13 @@ $(document).ready(function(){
             return
 
         }
-        else if (age >= 21){
+        else if (userAge >= 21){
             console.log("    Your are 21 or Older. Welcome to the party!")
             localStorage.setItem("over21", "PARTY");
 
 
             $('#modalID').modal("hide");
             $('html body').css('overflow','visible'); // Open scroll
-
         }
 
         return
@@ -74,7 +69,6 @@ $(document).ready(function(){
         // Lock the modal in place and stop scrolling
         $('#modalID').modal({backdrop: 'static', keyboard: false});
         $('html body').css('overflow','hidden');
-
     };
 
    // call fuction after some time (2s)
