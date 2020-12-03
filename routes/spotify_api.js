@@ -37,32 +37,53 @@ function authenticate(callback) {
 authenticate();
 
 module.exports = function(app, err) {
-    if (err) throw err;
-    app.get("/playlists/:pl", function (req,res) {
+
+  if (err) throw err;
+  app.get("/playlists/:pl", function (req,res) {
+
     spotifyApi.getPlaylist(req.params.pl) //'34inxLjFfBchpVk3nPQuDf')
     .then(function(data){
+
       let tracks = data.body.tracks.items;
 
-      // console.log("    --------------------------------\n    data: ",data, "  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
+      // console.log("    --------------------------------\n    data: ",data, "  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n\n\n\n\n\n");
       // console.log("     >>> \n     tracks: ", tracks)
       
-      console.log("     >>>>>>>>>>> \n ");
+      // console.log("     \n\n\n\n\n\n\n\n\n\<<<<<<<<<<  >>>>>>>>>>>");
       // console.log("    \n\n\n *** tracks[1] *** ", tracks[1]);
+      // console.log("    \n\n\n *** tracks[1].track.album.images[0] *** ", tracks[1].track.album.images);
+      // console.log("    \n\n\n *** tracks[1].track.album.images[0] *** ", tracks[1].track.album.images[2]);
       // console.log("    \n\n\n    *** tracks[1].track.name *** :         ",tracks[1].track.name);
       // console.log("    *** tracks[1].track.artists.name *** : ", tracks[1].track.artists[0].name);
-      console.log("      \n <<<<<<<<<<"); 
+      // console.log("      \n      <<<<<<<<<<  >>>>>>>>>>> \n "); 
 
-      console.log("\n\n\n\n\n\n\n")
+      console.log("\n\n\n\n\n")
+
+      let playlistInfo = []
 
       for (let i = 0; i < tracks.length; i++){
-        console.log("    \n    *** tracks[i].track.name *** :         ",tracks[i].track.name);
-        console.log("    *** tracks[i].track.artists.name *** : ", tracks[i].track.artists[0].name);
+        let addedAt = tracks[i].added_at;
+        let track = tracks[i].track.name;
+        let artist = tracks[i].track.artists[0].name;
+        let explicit = tracks[i].track.explicit;
+        let image_href = tracks[i].track.album.images[2].url;
+
+        // console.log("    \n    *** addeAt                   :         ",addedAt);
+        // console.log("    *** track                    :         ",track);
+        // console.log("    *** artist                   : ", artist);
+        // console.log("    *** explicit                 : ", explicit);
+        // console.log("    *** tracks[i].track.album.images[2] *** : ", image_href);
+
+        playlistInfo[i] ={addedAt : addedAt, track: track, artist: artist, explicit: explicit, image_href: image_href}
+        playlistInfo.push(playlistInfo[i]);
       }
 
-      res.send(JSON.stringify(data))}
-    )
-  
-  });
+      console.log("  \n\n\n\n\n  playlistInfo", playlistInfo)
+      
+      res.send(JSON.stringify(playlistInfo));
+    }
+  )
+});
 
   app.get("/spotify/track/:search", function (req, res) {
     spotifyApi.searchTracks(req.params.search)
@@ -71,7 +92,7 @@ module.exports = function(app, err) {
         }, function (err) {
             console.error(err);
         });
-});
+  });
 
 /*app.get("/spotify/me", function (req, res) {
 
