@@ -27,7 +27,7 @@ app.use(express.json());
 // =============================================================
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
-    console.log("App listening on http://localhost:" + PORT);
+    console.log("\nApp listening on http://localhost:" + PORT);
   });
 });
 
