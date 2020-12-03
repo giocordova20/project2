@@ -10,10 +10,6 @@ const client_id = '29fae85026954a9fbc2ebcc46a3d8986'; // Your client id
 const client_secret = '1329d539e2354828b1c9eab26db73f95'; // Your secret
 const redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
-
-
-
-
 const generateRandomString = function(length) {
     var text = '';
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
