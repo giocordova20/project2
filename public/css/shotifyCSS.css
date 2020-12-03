@@ -134,14 +134,20 @@ background-size: cover; */
   text-decoration: none;
 } */
 
-.pimg1, .pimg2, .pimg3 {
-  position: relative;
-  opacity:0.70;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.pimg1, .pimg2, .pimg3, .djimg2, .djimg3 {
+    position: relative;
+    opacity:0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+.DJMainLogo {
+    opacity: .9;
+    min-width: 50vw;
+}
+
 
 .pimg1{
   background-image: url('../assets/decorative-festive-light-bulbs-holidays-rooftop-cheerful-group-friends-raised-their-hands-up-with-alcohol.jpg');
@@ -156,6 +162,16 @@ background-size: cover; */
 .pimg3{
   background-image: url('../assets/happy-friends-are-having-beer-barbecue-party-sunny-day-cropped.jpg');
   min-height: 400px;
+}
+
+.djimg2{
+    background-image: url('../assets/beautiful-blonde-dj-girl-decks-party.jpg');
+    min-height: 400px;
+}
+
+.djimg3{
+    background-image: url('../assets/young-friends-dancing.jpg');
+    min-height: 400px;
 }
 
 .section{
