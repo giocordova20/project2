@@ -26,6 +26,9 @@ module.exports = function (app) {
     });
   });
 
+  // GET route for retreiving all songs for a given playlist. Needed for Handlebars.
+
+
   // POST route for creating new playlist
   app.post("/api/playlist", function (req, res) {
     db.Playlist.create(req.body).then(function (response) {
