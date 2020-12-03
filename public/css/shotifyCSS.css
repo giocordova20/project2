@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar{
   position: fixed;
   width:100%;
@@ -10,6 +17,12 @@
 
 .nav-link {
     color: black !important;
+}
+
+.DJsecondNav {
+color: white !important;
+text-shadow: 2px 2px 4px #000000;
+
 }
 
 .rect{
@@ -26,9 +39,7 @@
 #red{
   background-color:rgb(148, 48, 48);
 }
-*{
-  box-sizing: border-box;
-}
+
 
 body {
   /* Font */
@@ -45,6 +56,26 @@ body {
   width:100%;
   margin-left:0px;
 }
+
+.welcome {
+  font-size: 4vw !important;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+        top: 50%;
+        left: 30%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+} 
+
+.DJMainLogo {
+  /* height: 50vh; */
+  opacity: .9;
+  min-width: 50vw;
+  vertical-align: middle;
+}
+
 
 
 #showcase .showcase-right{
@@ -63,6 +94,9 @@ body {
   padding-right: 1rem;
   margin: auto;
   text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fullscreen-video-wrap {
@@ -134,14 +168,16 @@ background-size: cover; */
   text-decoration: none;
 } */
 
-.pimg1, .pimg2, .pimg3 {
-  position: relative;
-  opacity:0.70;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.pimg1, .pimg2, .pimg3, .djimg2, .djimg3 {
+    position: relative;
+    opacity:0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+
 
 .pimg1{
   background-image: url('../assets/decorative-festive-light-bulbs-holidays-rooftop-cheerful-group-friends-raised-their-hands-up-with-alcohol.jpg');
@@ -156,6 +192,16 @@ background-size: cover; */
 .pimg3{
   background-image: url('../assets/happy-friends-are-having-beer-barbecue-party-sunny-day-cropped.jpg');
   min-height: 400px;
+}
+
+.djimg2{
+    background-image: url('../assets/beautiful-blonde-dj-girl-decks-party.jpg');
+    min-height: 400px;
+}
+
+.djimg3{
+    background-image: url('../assets/young-friends-dancing.jpg');
+    min-height: 400px;
 }
 
 .section{
