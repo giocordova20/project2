@@ -56,10 +56,7 @@ module.exports = function (app, err) {
         // console.log("    \n\n\n    *** tracks[1].track.name *** :         ",tracks[1].track.name);
         // console.log("    *** tracks[1].track.artists.name *** : ", tracks[1].track.artists[0].name);
         // console.log("      \n      <<<<<<<<<<  >>>>>>>>>>> \n "); 
-      // console.log("      \n      <<<<<<<<<<  >>>>>>>>>>> \n "); 
-        // console.log("      \n      <<<<<<<<<<  >>>>>>>>>>> \n "); 
-
-        console.log("\n\n\n\n\n")
+        // console.log("\n\n\n\n\n")
 
         let playlistInfo = []
 
@@ -68,19 +65,21 @@ module.exports = function (app, err) {
           let track = tracks[i].track.name;
           let artist = tracks[i].track.artists[0].name;
           let explicit = tracks[i].track.explicit;
+          let track_uri = tracks[i].track.uri;
           let image_href = tracks[i].track.album.images[2].url;
 
           // console.log("    \n    *** addeAt                   :         ",addedAt);
           // console.log("    *** track                    :         ",track);
           // console.log("    *** artist                   : ", artist);
           // console.log("    *** explicit                 : ", explicit);
+          // console.log("    *** uri                 : ", track_uri);
           // console.log("    *** tracks[i].track.album.images[2] *** : ", image_href);
 
-          playlistInfo[i] = { addedAt: addedAt, track: track, artist: artist, explicit: explicit, image_href: image_href }
+          playlistInfo[i] = { addedAt: addedAt, track: track, artist: artist, explicit: explicit, image_href: image_href, track_uri: track_uri}
           playlistInfo.push(playlistInfo[i]);
         }
 
-        console.log("  \n\n\n\n\n  playlistInfo", playlistInfo)
+        // console.log("\n\n\n\n\n playlistInfo", playlistInfo);
 
         res.send(JSON.stringify(playlistInfo));
       }
