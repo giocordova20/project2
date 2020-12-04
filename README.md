@@ -1,5 +1,5 @@
 # project2
-![Logo](./assets/ShotifyLogoLarge3DWhite.png)
+![Logo](./public/assets/ShotifyLogoLarge3DWhite.png)
 
 ## Description
 Create an app to allow users to play preset playlists or create their own. Each song plays for 60s from a starting point selected by the user. There is no login required, but users must have a Spotify account. Based on Age the user will be taken to either Shotify or Minute DJ page.
