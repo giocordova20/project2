@@ -7,7 +7,7 @@ module.exports = function (app) {
   // GET route for getting all of the playlists
   app.get("/api/playlist", function (req, res) {
 
-    db.Playlist.findAll({
+    db.playlist.findAll({
     }).then(function (response) {
 
       res.json(response);

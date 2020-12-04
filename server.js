@@ -7,13 +7,21 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const app = express();
 
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 var PORT = process.env.PORT || 8888;
 app.use(express.static('public'))
    .use(cors())
    .use(cookieParser());
 
 require("./routes/login_routes.js")(app);
-require("./routes/spotify_api")(app);
+require("./routes/spotify_api.js")(app);
+require("./routes/playlist_contents-api-routes.js")(app);
+require("./routes/playlist-api-routes.js")(app);
 
 // Requiring our models for syncing
 var db = require("./models");
