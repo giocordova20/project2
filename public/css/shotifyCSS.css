@@ -250,3 +250,62 @@ background-size: cover; */
 .ptext .border.trans{
   background-color: transparent;
 }
+
+
+/*Footer css*/
+#footer__container{
+  position: absolute;
+  z-index: 999;
+  height: 50%;
+  width: 100%;
+  background-color: #111;
+}
+
+#footer__content{
+  display: block;
+  text-shadow: 2px 2px 4px #272727;
+  
+}
+
+#footer__logo{
+  float: right;
+  
+}
+
+.footer__list{
+  list-style-type: none;
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 45%;
+}
+
+.box{
+  padding-left: 25vh;
+  list-style-type: none;
+}
+.footer__link{
+  color: rgb(54, 54, 54) !important;
+  
+  
+}
+
+.ic{
+  margin:10 auto;
+  width: 50%;
+}
+
+#footer__head{
+  padding: 10px auto;
+  margin: 10px auto;
+  width: 20%;
+}
+
+
+.h_line { width:100%; height:1px; background: rgb(83, 83, 83); z-index: 999; }
+
+#Fmessage{
+  bottom: 0;
+}
+
+
+/* .../footter*/  
