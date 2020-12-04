@@ -9,7 +9,7 @@ INSERT INTO playlist_content (song_start_ms, track, artist, order_in_playlist, i
 VALUES (77000,"God’s Plan","Drake", 2, NULL, now(),now(),1, "spotify:track:6DCZcSspjsKoFjzjrWoCdn");
 
 INSERT INTO playlist_content (song_start_ms, track, artist, order_in_playlist, image_href, createdAt, updatedAt, playlistId, spotify_uri)
-VALUES (73000,"Starboy","The Weekend, Daft Punk", 3, NULL, now(),now(),1, "7MXVkk9YMctZqd1Srtv4MB");
+VALUES (73000,"Starboy","The Weekend, Daft Punk", 3, NULL, now(),now(),1, "spotify:track:7MXVkk9YMctZqd1Srtv4MB");
 
 INSERT INTO playlist_content (song_start_ms, track, artist, order_in_playlist, image_href, createdAt, updatedAt, playlistId, spotify_uri)
 VALUES (7100,"HUMBLE.","Kendrick Lamar", 4, NULL, now(),now(),1, "spotify:track:7KXjTSCq5nL1LoYtL7XAwS");

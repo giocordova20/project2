@@ -2,6 +2,7 @@ var totalSeconds = 0;
 var secondsElapsed = 0;
 var interval;
 
+let playlistUri = [];
 let access_token= "";
 function getKey(){
   $.ajax({
@@ -74,14 +75,14 @@ function startTimer() {
 
 
 
-
+console.log(playlistUri);
 
   $.ajax({
     method: "PUT",
     url: "https://api.spotify.com/v1/me/player/play",
     headers: { 'Authorization': 'Bearer ' + access_token },
     data: JSON.stringify({
-      "uris": [song_uri]
+      "uris": playlistUri
  }),
   }).then(function (res) {
     console.log(res);
@@ -159,6 +160,25 @@ function getTimePreferences() {
   setTime();
   renderTime();
 };
+
+function getSongs() {
+  let id = $(this).data('id');
+  $.ajax({
+    method: "GET",
+    url: "/api/playlist/songs/" + id,
+  }).then(function (res) {
+    console.log(res[0]);
+    for(let i = 0; i < res.length; i++) {
+      
+        playlistUri.push(res[i].spotify_uri);
+      
+    }
+    console.log(playlistUri);
+  })
+}
+
+
+$(document).on("click", ".playlist_btn", getSongs);
 
 $("#play").on("click", startTimer);
 $("#pause").on("click", pauseTimer);

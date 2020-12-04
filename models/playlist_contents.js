@@ -17,7 +17,11 @@ module.exports = function (sequelize, DataTypes) {
         },
         image_href: {
             type: DataTypes.TEXT
-        }}, 
+        },
+    spotify_uri: {
+        type: DataTypes.TEXT
+    }
+    }, 
             {freezeTableName: true}
         
 
