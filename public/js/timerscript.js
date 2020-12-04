@@ -2,6 +2,18 @@ var totalSeconds = 0;
 var secondsElapsed = 0;
 var interval;
 
+let access_token= "";
+function getKey(){
+  $.ajax({
+    method: "GET",
+    url: "/spotify/key",
+  }).then(function (res) {
+    console.log(res.key);
+    access_token = res.key
+  })
+};
+getKey();
+
 // This launches the app by calling setTime() and renderTime()
 getTimePreferences();
 
@@ -37,7 +49,7 @@ function getFormattedSeconds() {
    getFormattedMinutes/Seconds() and the renderTime() function.
    It essentially resets our timer */
 function setTime() {
-  var minutes = .05;
+  var minutes = 1; 
   clearInterval(interval);
   totalSeconds = minutes * 60;
 };
@@ -59,23 +71,28 @@ function renderTime() {
 // Notice no settings are changed other than to increment the secondsElapsed var
 function startTimer() {
   setTime();
-  /* $.ajax({
-     method: "POST",
-     url: "/spotify/play",
-   }).then(function (res) {
-     console.log(res);
- 
-   });*/
 
 
-  /* $.ajax({
-     method: "GET",
-     url: "/spotify/key",
-   }).then(function (res) {
-     console.log(res);
-     let key = res.key;
- 
-   });*/
+
+
+
+  $.ajax({
+    method: "PUT",
+    url: "https://api.spotify.com/v1/me/player/play",
+    headers: { 'Authorization': 'Bearer ' + access_token },
+    data: JSON.stringify({
+      "uris": [song_uri]
+ }),
+  }).then(function (res) {
+    console.log(res);
+  });
+
+
+// need to get song uris into array/object from the db 'spotify_uri' in playlist_contents
+// use the uri to keep track of the currently playing song to use for start/resume.
+
+
+
 
   // We only want to start the timer if totalSeconds is > 0
   if (totalSeconds > 0) {
@@ -83,22 +100,36 @@ function startTimer() {
        secondsElapsed variable which is used to check if the time is up */
     interval = setInterval(function () {
       secondsElapsed++;
-      // console.log(secondsElapsed) // ** Remove before saving // **
+      console.log(secondsElapsed) // ** Remove before saving // **
+
+      if (secondsElapsed % 30 == 0){
+
+        console.log("\n\n\n\n NEXT SONG. DRINK!\n\n");
+        
+       $.ajax({
+         method: "POST",
+         url: "https://api.spotify.com/v1/me/player/next",
+         headers: {'Authorization': 'Bearer ' + access_token },
+        }).then(function (res) {
+          console.log(res);
+        });
+      };
 
       // renderTime() is called here once every second.
       renderTime();
     }, 1000);
-  }
+  };
 };
 
 /* This function stops the setInterval() set in startTimer but does not
    reset the secondsElapsed variable and does not reset the time by calling "setTime()" */
 function pauseTimer() {
-  /* $.ajax({
-     method: "POST",
-     url: "/spotify/pause",
-   }).then(function (res) {
-     console.log(res);*/
+  $.ajax({
+    method: "PUT",
+    url: "https://api.spotify.com/v1/me/player/pause",
+    headers: {'Authorization': 'Bearer ' + access_token },
+    }).then(function (res) {
+   console.log(res);})
 
 
 
