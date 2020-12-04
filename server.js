@@ -7,6 +7,12 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const app = express();
 
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 var PORT = process.env.PORT || 8888;
 app.use(express.static('public'))
    .use(cors())

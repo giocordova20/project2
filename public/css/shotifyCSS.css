@@ -48,6 +48,7 @@ text-shadow: 1px 1px 3px #808080;
 
 #red{
   background-color:rgb(148, 48, 48);
+  height: 5vh;
 }
 
 
@@ -254,11 +255,12 @@ background-size: cover; */
 
 /*Footer css*/
 #footer__container{
-  position: absolute;
+  position: relative;
   z-index: 999;
-  height: 50%;
+  height: 100%;
   width: 100%;
   background-color: #111;
+  overflow: visible;
 }
 
 #footer__content{
@@ -280,18 +282,20 @@ background-size: cover; */
 }
 
 .box{
-  padding-left: 25vh;
+  padding-left: 20vh;
   list-style-type: none;
 }
 .footer__link{
   color: rgb(54, 54, 54) !important;
-  
+  align-items: center;
   
 }
 
 .ic{
   margin:10 auto;
   width: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 #footer__head{
@@ -303,8 +307,33 @@ background-size: cover; */
 
 .h_line { width:100%; height:1px; background: rgb(83, 83, 83); z-index: 999; }
 
-#Fmessage{
-  bottom: 0;
+#copyright__container{
+  vertical-align: bottom;
+}
+
+p.copyright {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  line-height: 40px;
+  font-size: 0.7em;
+  text-align: center;
+  bottom:0;
+}
+
+
+
+@media only screen and (max-width: 870px) {
+  #footer__container{ 
+    background-color: lightblue;
+  }
+  
+  p.box{
+    text-indent:2em;
+    list-style-type:disc;
+    display:list-item;
+    margin-left: 2em;
+  }
 }
 
 
