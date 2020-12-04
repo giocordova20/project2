@@ -1,8 +1,9 @@
 module.exports = function (app) {
     const db = require("../models");
     // variables to place songs into handlebars
-    // var songContainer = $(".song-container");
-    var songs;
+    // var document = "./public/index.html";
+    // var songContainer = document.getElementById("song-container");
+    // var songs;
 
     //get all songs in a playlist by plalist id // **This is working
     app.get("/api/playlist/songs/:playlistid", function (req, res) {
@@ -12,20 +13,20 @@ module.exports = function (app) {
             }
             }).then(function (response) {
             res.json(response);
-            songs = response;
-            displaySongs();
+            // songs = response;
+            // displaySongs();
         });
     });
 
     // function to display songs
-    function displaySongs() {
-        songContainer.empty();
-        var songsToAdd = [];
-        for (var i = 0; i < songs.length; i++) {
-            songsToAdd.push(createNewRow(songs[i]));
-        };
-        songContainer.append(songsToAdd);
-    };
+    // function displaySongs() {
+    //     songContainer.empty();
+    //     var songsToAdd = [];
+    //     for (var i = 0; i < songs.length; i++) {
+    //         songsToAdd.push(createNewRow(songs[i]));
+    //     };
+    //     songContainer.append(songsToAdd);
+    // };
 
     // Add a song to the playlist  // Need to get working. Will be called from a button
     app.post("/api/:playlistid/:songs", function (req, res) {
@@ -51,7 +52,7 @@ module.exports = function (app) {
     //maybe change time song starts
     // Put a song into a playlist   // Need to get working if possible. Will be called from a button
     app.put("/api/playlist/:playlistid/:songs", function (req, res) {
-        db.Playlist_content.update(
+        db.playlist_content.update(
             req.body,
             {
                 where: {

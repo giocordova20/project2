@@ -6,7 +6,7 @@ module.exports = function (app) {
   // GET route for getting all of the playlists
   app.get("/api/playlist", function (req, res) {
 
-    db.Playlist.findAll({
+    db.playlist.findAll({
     }).then(function (response) {
 
       res.json(response);
@@ -27,14 +27,14 @@ module.exports = function (app) {
 
   // POST route for creating new playlist
   app.post("/api/playlist", function (req, res) {
-    db.Playlist.create(req.body).then(function (response) {
+    db.playlist.create(req.body).then(function (response) {
       res.json(response);
     });
   });
 
   // DELETE route for deleting a playlist
   app.delete("/api/playlist/:id", function (req, res) {
-    db.Post.destroy({
+    db.playlist.destroy({
       where: {
         id: req.params.id
       }
@@ -46,7 +46,7 @@ module.exports = function (app) {
   // PUT route for updating playlist
   //most likely changing a playlists name
   app.put("/api/playlist", function (req, res) {
-    db.Post.update(
+    db.playlist.update(
       req.body,
       {
         where: {
