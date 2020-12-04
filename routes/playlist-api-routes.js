@@ -1,8 +1,7 @@
-const db = require("../models");
-
 // Routes
 // =============================================================
 module.exports = function (app) {
+  const db = require("../models");
 
   // GET route for getting all of the playlists
   app.get("/api/playlist", function (req, res) {
@@ -16,12 +15,12 @@ module.exports = function (app) {
 
   // Get route for retrieving a single playlist
   app.get("/api/playlist/:id", function (req, res) {
-    db.Playlist.findOne({
+    db.playlist.findAll({
       where: {
         id: req.params.id,
       }
     }).then(function (response) {
-      console.log(response);
+      // console.log("\n\n\n\n\n\n IN playlist-api-proutes \n", response);
       res.json(response);
     });
   });
