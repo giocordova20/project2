@@ -2,225 +2,287 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shotify</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="./css/timerstyle.css"/>
-    <link rel="stylesheet" href="./css/shotifyCSS.css">
-    <link rel="stylesheet" href="./css/modal.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shotify</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="./css/timerstyle.css" />
+  <link rel="stylesheet" href="./css/shotifyCSS.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#"> <img src="assets/ShotifyNavbarTest.png" height="50"
-                class="d-inline-block align-top" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./login.html">Log In to Spotify</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#what-is-shotify">What is Shotify?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#how-it-works">How it Works</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#playlists">Playlists</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#"> <img src="assets/ShotifyNavbarTest.png" height="50"
+        class="d-inline-block align-top" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">Log In to <span style="color: #1DB954">Spotify</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#what-is-shotify">What is Shotify?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#how-it-works">How it Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#playlists">Playlists</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <header class="v-header container">
+    <div class="fullscreen-video-wrap">
+      <video src="assets/shotifyMainVideo.mp4" autoplay="true" loop="true" muted></video>
+    </div>
+    <div class="header-overlay"></div>
+    <section id="showcase">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-1 col-sm-1"></div> -->
+          <div class="col-md-10 col-sm-10">
+            <div class="showcase-left animate__animated animate__fadeIn animate__delay-2s animate__slower">
+              <img src="assets/ShotifyLogoLarge3DWhite.png">
+            </div>
+            <div class="col-md-2 col-sm-2"></div>
+          </div>
         </div>
-    </nav>
-    <header class="v-header container">
-        <div class="fullscreen-video-wrap">
-            <video src="assets/rooftopPartyPreview.mp4" autoplay="true" loop="true" muted></video>
+      </div>
+    </section>
+  </header>
+  <section class="section section-light" id="what-is-shotify">
+    <h2>What is Shotify?</h2>
+    <p>Shotify is a fast-paced music player party experience that allows the user to choose their own musical
+      adventure in a 60 minute, 60 song power hour of fun! Shotify utilizes playlists that you create to play 60 seconds
+      of your favorite songs, and gives you a new song every minute! The concept of a "power hour" is a time-tested
+      tradition in the world of partying and pre-gaming with your friends. Now Shotify does all the hard work for you!
+      All you have to do is pick a playlist and sit back, relax, (or stand up and dance), and crack a cold one with your
+      friends. 
+      <br>
+      <br>
+      Every time the song changes, take a drink! The traditional amount is one "shot" of beer every minute for
+      an hour, and who are we to mess with tradition! This ancient formula provides the user with 90 ounces of liquid
+      refreshment in just one
+      hour! (That's 7.5 12-ounce beers for you math fans) Please remember to drink responsibly. If you can't keep up, try
+      alternating with shots of water to prolong the fun!
+    </p>
+  </section>
+
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border trans">
+        MUSIC PLAYER
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-dark" id="how-it-works">
+    <h2>How it Works</h2>
+    <p>Shotify combines a cutting edge proprietary Alcohol Intake Management System technology (AIMS) with Spotify's Web
+      API so that users can keep the
+      party going and the alcohol flowing for all 60 minutes of their musical adventure. You can start your experience using
+      one of Shotify's pre-curated playlists from our team of tastemakers and rump shakers, you can import your own pre-made
+      playlists from your Spotify account, or you can create your own here on Shotify! The party starts as soon as you press
+      play, and every 60 seconds, you'll be punched in the face with a fistful of fun. 
+      <br>
+      <br>
+      Remember to stick with the formula!
+      Shotify AIMS to give you a good time using the 1:1 drink a minute formula. Our research staff has spent years
+      conducting field tests and have concluded that increasing the drink ratio may seem like a good idea, but could
+      actually impact your experience in a less than ideal way. Please drink responsibly. If you're having too good of a
+      time and don't think you can play for the full hour, it's recommended that you drink some water and watch an episode
+      of Shark Tank. It is not recommended that you start texting exes or send any work-related emails during or after using
+      Shotify.
+    </p>
+  </section>
+
+  <div class="pimg3">
+    <div class="ptext">
+      <span class="border trans">
+        Alcohol Intake Management System
+      </span>
+    </div>
+  </div>
+  <div class="rect" id="green">
+    <section class="section section-playlists" id="playlists">
+      <h2>Playlists Go Here</h2>
+      <p>This section will be populated with playlists and a create-your-own playlist option. Quas atque accusamus
+        provident repellendus est
+        repudiandae ipsa cupiditate beatae voluptates, earum, officia saepe. Vitae qui minima incidunt at
+        laudantium
+        soluta praesentium, fuga maiores eaque temporibus aliquid provident quae eos dolorem ab dolor nulla
+        delectus
+        quia facere? Numquam, necessitatibus ullam. Molestiae, consequuntur harum voluptatum assumenda tempora
+        id
+        quos. Quo eos illum numquam in molestiae architecto sint, sunt libero.
+      </p>
+      <div class="container">
+
+        <div class="row">
+          <div>
+            <h6><strong>Search for songs:</strong></h6>
+            <form class="form-inline my-2" id="js-search-form">
+              <input class="form-control mr-sm-2" for="search" type="search" id="js-search-input" placeholder="Search"
+                aria-label="Search">
+              <button class="btn btn-outline-success my-lg-0" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="timer">
+            <div class="controls">
+              <div class="time">
+                <div id="minutes">60</div>
+                <div id="seconds">00</div>
+              </div>
+              <div class="buttons">
+                <button aria-label="play" id="play">
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <button aria-label="pause" id="pause">
+                  <i class="fa fa-pause" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="header-overlay"></div>
-        <section id="showcase">
-            <div class="container">
-              <div class="row">
-                <!-- <div class="col-md-1 col-sm-1"></div> -->
-                <div class="col-md-10 col-sm-10">
-                  <div class="showcase-left animate__animated animate__fadeIn animate__delay-2s animate__slower">
-                    <img src="assets/ShotifyLogoLarge3DWhite.png">
-                  </div>
-                  <div class="col-md-2 col-sm-2"></div>
+      </div>
+
+      <div>
+        <!-- Modal -->
+        <div class="modal fade" id="shotify-over" tabindex="-1" role="dialog" aria-modal="true" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalCenterTitle">Shot!fy</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 class="game-over">Thanks for Playing. Please call an Uber or Lyft.</h5>
+              </div>
+              <div class="modal-footer my-auto text-center">
+                <div class="col-sm my-1">
+                  <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
-          </section>
-    </header>
-    <section class="section section-light" id="what-is-shotify">
-        <h2>What is Shotify?</h2>
-        <p>Shotify is a fast-paced music player party experience that allows the user to choose their own musical
-            adventure in a 60 minute, 60 song power hour of fun! Quas atque accusamus provident repellendus est
-            repudiandae ipsa cupiditate beatae voluptates, earum, officia saepe. Vitae qui minima incidunt at laudantium
-            soluta praesentium, fuga maiores eaque temporibus aliquid provident quae eos dolorem ab dolor nulla delectus
-            quia facere? Numquam, necessitatibus ullam. Molestiae, consequuntur harum voluptatum assumenda tempora id
-            quos. Quo eos illum numquam in molestiae architecto sint, sunt libero. Qui ipsam odit iure pariatur dolorum
-            odio deleniti hic perspiciatis. Sed saepe eligendi itaque perspiciatis, earum exercitationem eum impedit
-            corporis accusantium eos quam enim dolor neque placeat suscipit, culpa quod omnis? Sit, distinctio deserunt.
-        </p>
-    </section>
-    
-    <div class="pimg2">
-        <div class="ptext">
-            <span class="border trans">
-                MUSIC PLAYER
-            </span>
+          </div>
         </div>
-    </div>
+        <!------------------------->
+      </div>
 
-    <section class="section section-dark" id="how-it-works">
-        <h2>How it Works</h2>
-        <p>Shotify uses cutting edge Alcohol Intake Management System technology (A.I.M.S.) so that users can keep the
-            party going and the alcohol flowing for all 60 minutes of their muscial adventure. Quas atque accusamus
-            provident repellendus est
-            repudiandae ipsa cupiditate beatae voluptates, earum, officia saepe. Vitae qui minima incidunt at laudantium
-            soluta praesentium, fuga maiores eaque temporibus aliquid provident quae eos dolorem ab dolor nulla delectus
-            quia facere? Numquam, necessitatibus ullam. Molestiae, consequuntur harum voluptatum assumenda tempora id
-            quos. Quo eos illum numquam in molestiae architecto sint, sunt libero.
-        </p>
+
+
+
+
+
+
+
     </section>
+  </div>
+  <div class="rect" id="blue"></div>
 
-    <div class="pimg3">
-        <div class="ptext">
-            <span class="border trans">
-                Alcohol Intake Management System
-            </span>
-        </div>
-    </div>
-    <div class="rect" id="green">
-        <section class="section section-playlists" id="playlists">
-            <h2>Playlists Go Here</h2>
-            <p>This section will be populated with playlists and a create-your-own playlist option. Quas atque accusamus
-                provident repellendus est
-                repudiandae ipsa cupiditate beatae voluptates, earum, officia saepe. Vitae qui minima incidunt at
-                laudantium
-                soluta praesentium, fuga maiores eaque temporibus aliquid provident quae eos dolorem ab dolor nulla
-                delectus
-                quia facere? Numquam, necessitatibus ullam. Molestiae, consequuntur harum voluptatum assumenda tempora
-                id
-                quos. Quo eos illum numquam in molestiae architecto sint, sunt libero.
-            </p>
-            <div class="container">
+  <div class="rect" id="red"></div>
 
+    <footer>
+      <div id="footer__container">
+          <div id="footer__content">
               <div class="row">
-              <div>
-                <h6><strong>Search for songs:</strong></h6>
-                <form class="form-inline my-2" id="js-search-form">
-                    <input class="form-control mr-sm-2" for="search" type="search" id="js-search-input" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-lg-0" type="submit">Search</button>
-                </form>
-              </div>
-                <div class="timer">
-                  <div class="controls">
-                    <div class="time">
-                      <div id="minutes">60</div>
-                      <div id="seconds">00</div>
-                    </div>
-                    <div class="buttons">
-                      <button aria-label="play" id="play">
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </button>
-                      <button aria-label="pause" id="pause">
-                        <i class="fa fa-pause" aria-hidden="true"></i>
-                      </button>
-                    </div>
+                  <div class="col-md-9"></div>
+                  <!--logo-->
+                  <a id="footer__logo"  href="#shotify"> <img src="assets/ShotifyLogoLarge3DWhite.png" height="50" alt=""></a>
                   </div>
-                </div>
-              </div>
-             </div>
 
-              <div>      
-                <!-- Modal -->
-                <div class="modal fade" id="shotify-over" tabindex="-1" role="dialog" aria-modal="true" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title text-center" id="exampleModalCenterTitle">Shot!fy</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <h5 class="game-over">Thanks for Playing. Please call an Uber or Lyft.</h5>
-                    </div>
-                    <div class="modal-footer my-auto text-center">
-                        <div class="col-sm my-1">
-                          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-                <!------------------------->
-            </div>
+                  <hr class="h_line">
 
-
-
-
-
-
-
-
-        </section>
-    </div>
-    <div class="rect" id="blue"></div>
-
-    <div class="rect" id="red"></div>
+                  <article>
+                      <div class="row">
+                          <div class="col-md-4 ">         
+                              <a class="footer__link box" href="#what-is-shotify"> What is 60 Second Dj</a>
+                          </div>
+                          <div class="col-md-4 ">       
+                              <a class="footer__link box" href="#how-it-works">How it Works</a>
+                          </div>      
+                          <div class="col-md-4">     
+                              <p class="box" href="#">about us</p>
+                          </div>
+                      </div>
+                      <h2 id="footer__head">socail media</h2>
+                      <div class="row box ">
+                          <div class="col-md-4">
+                              <a class="footer__link ic" href="https://www.instagram.com/60seconddj/"><li> <br> <img src="assets/instagramW.png.jpg" alt="instagram__logo" height="40"><br></li></a>
+                          </div>
+                          <div class="col-md-4">
+                              <a class="footer__link ic" href="https://www.instagram.com/shotifymusic/"><li> <br> <img src="assets/instagramW.png.jpg" alt="instagram__logo" height="40"><br></li></a>
+                          </div> 
+                      </div>
+                      <hr class="h_line">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <p id="Fmessage">@2020.group1 project</p>
+                          </div>
+                      </div>
+              </article>            
+          </div>
+      </div>
+  </footer>
 
 
 
-
-        <section>
-            <!--MODAL-->
-            <div class="modal" tabindex="-1" role="dialog" id="modalID">
-                <div class="modal__contents" id="pop-up">
-                    <!-- <div class="modal__close-bar" id="close-btn">
+  <section>
+    <!--MODAL-->
+    <div class="modal" tabindex="-1" role="dialog" id="modalID">
+      <div class="modal__contents" id="pop-up">
+        <!-- <div class="modal__close-bar" id="close-btn">
                         <span>X</span>
                     </div> -->
-                    <div class="modal-body">
-                        <h3 id="age-text">Please enter your date of birth</h3>
-                        <div id="underage" class="underage hide"></div>
-                    </div>
-                    <!-- <form id="dob">
+        <div class="modal-body">
+          <h3 id="age-text">Please enter your date of birth</h3>
+          <div id="underage" class="underage hide"></div>
+        </div>
+        <!-- <form id="dob">
                         <input type="date" name="begin" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31">
                         <button id="submit1">Submit</button>
                       </form> -->
-                    <input id="dob" type="date" class="date" min="1900-01-01" max="2030-12-32">
-                    <button id="submit1">Submit</button>
+        <input id="dob" type="date" class="date" min="1900-01-01" max="2030-12-32">
+        <button id="submit1">Submit</button>
 
 
 
-                </div>
-            </div>
-        
-            <!--/MODAL-->
-        </section>
+      </div>
+    </div>
 
-    
-    <script src="./js/modal.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="js/navbar.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./js/timerscript.js"></script>
-    <script src="./js/search.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!--/MODAL-->
+  </section>
+
+
+  <script src="./js/modal.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="js/navbar.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./js/timerscript.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
+
 </html>

@@ -181,4 +181,3 @@ VALUES (6000,"Jessie’s Girl","Rick Springfields",58, NULL, now(),now(),1);
 
 INSERT INTO playlist_content (song_start_ms, track, artist, order_in_playlist, image_href, createdAt, updatedAt, playlistId)
 VALUES (23000,"Boyz In The Hood","Dynamite Hack", 60, NULL, now(),now(),1);
-

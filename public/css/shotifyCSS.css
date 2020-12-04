@@ -4,6 +4,14 @@
 html {
     scroll-behavior: smooth;
 }
+h2, h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
 
 .navbar{
   position: fixed;
@@ -13,16 +21,18 @@ html {
   margin-top: -5px;
   background: rgba(255, 255, 255, 0.3);
   z-index: 999;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 500;
 }
 
 .nav-link {
     color: black !important;
 }
 
+
 .DJsecondNav {
 color: white !important;
-text-shadow: 2px 2px 4px #000000;
-
+text-shadow: 1px 1px 3px #808080;
 }
 
 .rect{
@@ -218,7 +228,8 @@ background-size: cover; */
   color: #ddd;
 }
 
-.ptext{
+.ptext {
+  font-family: 'Open Sans', sans-serif;
   position: absolute;
   top: 50%;
   width: 100%;
@@ -227,6 +238,7 @@ background-size: cover; */
   font-size: 27px;
   letter-spacing: 8px;
   text-transform: uppercase;
+
 }
 
 .ptext .border{
@@ -238,3 +250,62 @@ background-size: cover; */
 .ptext .border.trans{
   background-color: transparent;
 }
+
+
+/*Footer css*/
+#footer__container{
+  position: absolute;
+  z-index: 999;
+  height: 50%;
+  width: 100%;
+  background-color: #111;
+}
+
+#footer__content{
+  display: block;
+  text-shadow: 2px 2px 4px #272727;
+  
+}
+
+#footer__logo{
+  float: right;
+  
+}
+
+.footer__list{
+  list-style-type: none;
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 45%;
+}
+
+.box{
+  padding-left: 25vh;
+  list-style-type: none;
+}
+.footer__link{
+  color: rgb(54, 54, 54) !important;
+  
+  
+}
+
+.ic{
+  margin:10 auto;
+  width: 50%;
+}
+
+#footer__head{
+  padding: 10px auto;
+  margin: 10px auto;
+  width: 20%;
+}
+
+
+.h_line { width:100%; height:1px; background: rgb(83, 83, 83); z-index: 999; }
+
+#Fmessage{
+  bottom: 0;
+}
+
+
+/* .../footter*/  
