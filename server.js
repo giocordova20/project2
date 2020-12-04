@@ -13,7 +13,10 @@ app.use(express.static('public'))
    .use(cookieParser());
 
 require("./routes/login_routes.js")(app);
+require("./routes/playlist-api-routes")(app);
+require("./routes/playlist_contents-api-routes.js")(app);
 require("./routes/spotify_api")(app);
+
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -25,7 +28,7 @@ app.use(express.json());
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log("\nApp listening on http://localhost:" + PORT);
   });

@@ -19,9 +19,9 @@ module.exports = function(sequelize, DataTypes) {
       spotify_playlist_id: {
         type: DataTypes.TEXT,
         allowNull: false
-      }
-    });
-  
+      }}, 
+      {freezeTableName: true}
+);  
     Playlist.associate = function(models) {
         Playlist.hasMany(models.playlist_content, {
           as: 'Playlist_content',

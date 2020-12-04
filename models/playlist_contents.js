@@ -17,9 +17,11 @@ module.exports = function (sequelize, DataTypes) {
         },
         image_href: {
             type: DataTypes.TEXT
-        }
+        }}, 
+            {freezeTableName: true}
+        
 
-    });
+    );
 
 /*    Playlist_content.associate = function (models) {
         Playlist_content.belongsTo(Playlists, {
