@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "NO",
-=======
     "password": "Louise#89",
->>>>>>> 9ce61bba17039bbc7a19df00195e0122d3c74a6d
     "database": "shotifyDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
