@@ -27,16 +27,5 @@ module.exports = function (sequelize, DataTypes) {
 
     );
 
-/*    Playlist_content.associate = function (models) {
-        Playlist_content.belongsTo(Playlists, {
-            as: 'playlist',
-            foreignKey: {
-                allowNull: false
-            },
-            constraints: false
-        });
-
-    }*/
-
     return Playlist_content;
 };
