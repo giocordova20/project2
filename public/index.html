@@ -22,7 +22,10 @@
 </head>
 
 <body>
+  <!-- Full Page Container -->
   <div class="page-container">
+
+    <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#"> <img src="assets/ShotifyNavbarTest.png" height="50"
         class="d-inline-block align-top" alt=""></a>
@@ -47,6 +50,8 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Header Logo -->
   <header class="v-header container">
     <div class="fullscreen-video-wrap">
       <video src="assets/shotifyMainVideo.mp4" autoplay="true" loop="true" muted></video>
@@ -55,7 +60,6 @@
     <section id="showcase">
       <div class="container">
         <div class="row">
-          <!-- <div class="col-md-1 col-sm-1"></div> -->
           <div class="col-md-10 col-sm-10">
             <div class="showcase-left animate__animated animate__fadeIn animate__delay-2s animate__slower">
               <img src="assets/ShotifyLogoLarge3DWhite.png">
@@ -66,6 +70,8 @@
       </div>
     </section>
   </header>
+
+  <!-- Explanation Section -->
   <section class="section section-light" id="what-is-shotify">
     <h2>What is Shotify?</h2>
     <p>Shotify is a fast-paced music player party experience that allows the user to choose their own musical
@@ -84,6 +90,7 @@
     </p>
   </section>
 
+  <!-- Music Player section. -->
   <div class="pimg2">
     <div class="ptext">
       <span class="border trans">
@@ -92,6 +99,7 @@
     </div>
   </div>
 
+  <!-- How it works section. -->
   <section class="section section-dark" id="how-it-works">
     <h2>How it Works</h2>
     <p>Shotify combines a cutting edge proprietary Alcohol Intake Management System technology (AIMS) with Spotify's Web
@@ -119,6 +127,8 @@
             </span>
         </div>
     </div>
+
+    <!-- Playlists section. -->
     <div class="rect" id="green">
         <section class="section section-playlists" id="playlists">
             <h2>Playlists Go Here</h2>
@@ -126,16 +136,16 @@
               <input class="form-control mr-sm-2" for="search" type="search" id="js-playlist-input" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success my-lg-0" type="submit">Create Playlist</button>
           </form>
-            <p>This section will be populated with playlists and a create-your-own playlist option. Quas atque accusamus
-                provident repellendus est
-                repudiandae ipsa cupiditate beatae voluptates, earum, officia saepe. Vitae qui minima incidunt at
-                laudantium
-                soluta praesentium, fuga maiores eaque temporibus aliquid provident quae eos dolorem ab dolor nulla
-                delectus
-                quia facere? Numquam, necessitatibus ullam. Molestiae, consequuntur harum voluptatum assumenda tempora
-                id
-                quos. Quo eos illum numquam in molestiae architecto sint, sunt libero.
-            </p>
+          <p>Here is the heart of the Shot!fy application. Search songs and create your own specialized playlists to fill an hour listening enjoyment. Find and
+            select the songs you think will get your friends talking, laughing, and drinking. Choose wisely! Don’t want to take the time to search and select
+            60 songs, get the party started with our pre-populated playlist that has been tested thoroughly by are staff and test participants. Click the
+            Select button next to the playlist name and you’re ready.
+          </p>
+          <p>
+            Feeling bold enough to create a playlist? First enter a playlist name, and click ‘Create Playlist’. Make sure it’s something that pops. Select the
+            your playlist and you’re ready to start adding songs. Enter a song title and click ‘Search’. Your song will appear in the playlist. Once your list
+            is completed you’re ready to Shot!fy.
+          </p>
             <ul>
               <li id="playlist-list"></li>
             </ul>
@@ -190,8 +200,7 @@
                     </div>
                   </div>
                 </div>
-                <!------------------------->
-            </div>
+              </div>
 
 
 
@@ -202,6 +211,8 @@
 
         </section>
     </div>
+
+    <!-- Handlebars section -->
     <div class="rect" id="blue">
       <!-- Div to store handlebars -->
              <div class="hidden col-md-6" id="playlist-songs"></div>
@@ -217,33 +228,32 @@
             </script>
     </div>
 
+  <div class="rect" id="red">
+    <footer>
+        <div id="footer__container">
+            <div id="footer__content">
+                <div class="row">
+                    <div class="col-md-4" id="footer__logo__container">
+                        <!--logo-->
+                        <img id="footer__logo" src="assets/ShotifyLogoLarge.png" height="60">
+                    </div>
+                    <div class="col-md-4" id="ic__container">
+                        <P id="message">Follow us on instagram</P> 
+                        <br>
+                        <a id="ic" href="https://www.instagram.com/shotifymusic/"  target="_blank"><li> <img src="assets/instagramW.png.jpg" alt="instagram__logo" height="40"></li></a>
+                    
+                    </div>
+                    <div class="col-md-4" id="copyright__container">
+                        <br><br><br>
+                        <p id="copyright">&copy;2020 Shotifive</p>
+                    </div>
+                </div>         
+            </div>
+        </div>
+    </footer>
+</div>
 
-  
-    <div class="morph" id="blue">
-      <footer id="footer">
-          <div id="footer__container">
-              <div id="footer__content">
-                  <div class="row">
-                      <div class="col-md-4" id="footer__logo__container">
-                          <!--logo-->
-                           <img id="footer__logo" src="assets/ShotifyLogoLarge.png" height="60" width="200">
-                      </div>
-                      <div class="col-md-4" id="ic__container">
-                          <P id="message">Follow us on instagram</P> 
-                          <br>
-                          <a id="ic" href="https://www.instagram.com/shotifymusic/"  target="_blank"><li> <img src="assets/instagramW.png.jpg" alt="instagram__logo" height="40"></li></a>
-                      
-                      </div>
-                      <div class="col-md-4" id="copyright__container">
-                          <br><br><br>
-                          <p id="copyright">&copy;2020 Shotifive</p>
-                      </div>
-                  </div>         
-              </div>
-          </div>
-      </footer>
-  </div>
-
+        <!-- Age Verification Modal. -->
         <section>
             <!--MODAL-->
             <div class="modal" tabindex="-1" role="dialog" id="modalID">

@@ -51,7 +51,7 @@ function getFormattedSeconds() {
    getFormattedMinutes/Seconds() and the renderTime() function.
    It essentially resets our timer */
 function setTime() {
-  var minutes = 1;
+  var minutes = 60;
   clearInterval(interval);
   totalSeconds = minutes * 60;
 };
@@ -104,7 +104,7 @@ function startTimer() {
       secondsElapsed++;
       console.log(secondsElapsed) // ** Remove before saving // **
 
-      if (secondsElapsed % 30 == 0) {
+      if (secondsElapsed % 60 == 0) {
 
         console.log("\n\n\n\n NEXT SONG. DRINK!\n\n");
 
@@ -195,17 +195,6 @@ function getSongs(id) {
         // Add the compiled html to the page
         $("#playlist-songs").append(theCompiledHtml);
       
-      // if (i < 10) {
-      //   const card = $("<div>");
-      //   const cardBody = $("<div>");
-      //   card.addClass("Card");
-
-      //   cardBody.addClass("card-body");
-      //   cardBody.text(`${res[i].track} by ${res[i].artist}`);
-
-      //   card.append(cardBody);
-      //   songList.append(card);
-      // }
       playlistUri.push(res[i].spotify_uri);
     };
     console.log(playlistUri);
@@ -217,7 +206,7 @@ function setId() {
   getSongs(id);
 }
 
-
+// event listener for submit btn to get songs
 document.getElementById('js-search-form').addEventListener('submit', function (event) {
   event.preventDefault();
   $("#green").removeClass(".rect");
