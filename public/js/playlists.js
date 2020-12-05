@@ -1,12 +1,12 @@
 // const playlist = require("../../models/playlist");
 
-$(document).ready(function() {
-    const playlistList = $("#playlist-list");
-    var playlistId;
+$(document).ready(function () {
+  const playlistList = $("#playlist-list");
+  var playlistId;
 
-    getPlaylists();
+  getPlaylists();
 
-    // A function to get Authors and then render our list of Authors
+  // A function to get Authors and then render our list of Authors
   function getPlaylists() {
     $.get("/api/playlist", renderPlaylistList);
   }
@@ -45,4 +45,26 @@ $(document).ready(function() {
     playlistList.append(card);
     return card;
   }
+
+
+  function createPlaylist(playlist) {
+    $.post("/api/playlist", playlist)
+      .then(
+        getPlaylists()
+      );
+  }
+
+  document.getElementById('js-playlist-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    let name = document.getElementById('js-playlist-input').value;
+    let playlist = {
+      playlist_name: name,
+      genre: 1,
+      drink: 1,
+      explicit: true,
+      spotify_playlist_id: "gyuyguuh"
+    };
+
+    createPlaylist(playlist);
+  });
 })
