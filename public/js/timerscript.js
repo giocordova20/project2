@@ -173,24 +173,47 @@ function getSongs(id) {
     url: "/api/playlist/songs/" + id,
   }).then(function (res) {
     console.log(res[0]);
+
+    // Grab the template script
+    var source = $("#playlist-songs-template").html();
+      
+    // Compile the template
+    var template = Handlebars.compile(source);
+
+
     for (let i = 0; i < res.length; i++) {
-      if (i < 10) {
-        const card = $("<div>");
-        const cardBody = $("<div>");
-        card.addClass("Card");
+      
+        // Define our data object
+        var songs = {
+          "id": res[i].id,
+          "track": res[i].track,
+          "artist": res[i].artist
+        };
 
-        cardBody.addClass("card-body");
-        cardBody.text(`${res[i].track} by ${res[i].artist}`);
+        // Pass our data to the template
+        var theCompiledHtml = template(songs);
+      
+        // Add the compiled html to the page
+        $('#playlist-songs').append(theCompiledHtml);
+      
+      
+      
+      // if (i < 10) {
+      //   const card = $("<div>");
+      //   const cardBody = $("<div>");
+      //   card.addClass("Card");
 
-        card.append(cardBody);
-        songList.append(card);
-      }
+      //   cardBody.addClass("card-body");
+      //   cardBody.text(`${res[i].track} by ${res[i].artist}`);
+
+      //   card.append(cardBody);
+      //   songList.append(card);
+      // }
       playlistUri.push(res[i].spotify_uri);
-
-    }
+    };
     console.log(playlistUri);
-  })
-}
+    }
+  )};
 
 function setId() {
   let id = $(this).data('id');
