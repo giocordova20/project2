@@ -194,9 +194,7 @@ function getSongs(id) {
         var theCompiledHtml = template(songs);
       
         // Add the compiled html to the page
-        $('#playlist-songs').append(theCompiledHtml);
-      
-      
+        $("#playlist-songs").append(theCompiledHtml);
       
       // if (i < 10) {
       //   const card = $("<div>");
@@ -212,7 +210,7 @@ function getSongs(id) {
       playlistUri.push(res[i].spotify_uri);
     };
     console.log(playlistUri);
-    }
+  }
   )};
 
 function setId() {
@@ -223,6 +221,8 @@ function setId() {
 
 document.getElementById('js-search-form').addEventListener('submit', function (event) {
   event.preventDefault();
+  $("#green").removeClass(".rect");
+  $("#green").addClass(".morph");
   let search = document.getElementById('js-search-input').value;
   if (search) {
     $.ajax({

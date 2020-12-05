@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <div class="page-container">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#"> <img src="assets/ShotifyNavbarTest.png" height="50"
         class="d-inline-block align-top" alt=""></a>
@@ -203,20 +204,23 @@
     </div>
     <div class="rect" id="blue">
       <!-- Div to store handlebars -->
-             <div class="container hidden" id="playlist-songs"></div>
+             <div class="hidden col-md-6" id="playlist-songs"></div>
+             <div class="col-md-6" id="playlist-songs2"></div>
 
             <!-- Handlebars template -->
             <script id="playlist-songs-template" type="text/x-handlebars-template">
-              <ul>
-                <li class="songs">{{id}}. {{track}} by {{artist}}<br></li>
+              <ul class="list-group">
+                <li class="songs list-group-item">
+                  {{id}}. {{track}} by {{artist}}
+                <br></li>
               </ul>
             </script>
     </div>
 
 
   
-    <div class="rect" id="red">
-      <footer>
+    <div class="morph" id="blue">
+      <footer id="footer">
           <div id="footer__container">
               <div id="footer__content">
                   <div class="row">
@@ -262,6 +266,7 @@
 
                 </div>
             </div>
+          </div>
         
             <!--/MODAL-->
         </section>

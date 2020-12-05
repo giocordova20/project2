@@ -39,6 +39,17 @@ text-shadow: 1px 1px 3px #808080;
   width:100%;
   height:100vh;
 }
+
+.morph{
+  width:100%;
+  height:250vh;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
 #green{
   background-color:#559065;
 }
@@ -116,6 +127,17 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* .container{
+  max-width: 960px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 .fullscreen-video-wrap {
   position: absolute;
@@ -274,6 +296,13 @@ background-size: cover; */
   position: absolute;
   bottom: 0;
   
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;   
 }
 
 #ic__container{
