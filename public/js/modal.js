@@ -28,6 +28,8 @@ $(document).ready(function(){
         else if(over21 === "NO PARTY"){
             console.log("  You are under 21. Good bye!")
 
+            window.open("/60seconddj");
+
             console.log("  NEED CODE TO DIRECT TO 60Second DJ Page");   // Delete this code after 60second page is built 
             localStorage.setItem("over21", "PARTY");                    // Setting over21 to PARTY as a workaround for now
             $('#modalID').modal("hide");

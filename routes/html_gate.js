@@ -6,3 +6,17 @@ what need is a
 listener event -- to the input of the user 
 */
 
+var path = require("path");
+// Routes
+// =============================================================
+module.exports = function(app) {
+    
+    app.get("/", function(req, res) {
+      res.sendFile(path.join(__dirname, "../public/index.html"));
+    });
+
+    app.get("/60seconddj", function(req, res) {
+      res.sendFile(path.join(__dirname, "../public/60secondDJ.html"));
+    });
+
+};
