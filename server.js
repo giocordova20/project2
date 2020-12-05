@@ -7,6 +7,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const app = express();
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
@@ -24,7 +25,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require("./routes/login_routes.js")(app);
 require("./routes/playlist-api-routes")(app);
 require("./routes/playlist_contents-api-routes.js")(app);
-require("./routes/spotify_api")(app);
 require("./routes/html_gate.js")(app);
 
 // Requiring our models for syncing
