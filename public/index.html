@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <div class="page-container">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#"> <img src="assets/ShotifyNavbarTest.png" height="50"
         class="d-inline-block align-top" alt=""></a>
@@ -201,12 +202,25 @@
 
         </section>
     </div>
-    <div class="rect" id="blue"></div>
+    <div class="rect" id="blue">
+      <!-- Div to store handlebars -->
+             <div class="hidden col-md-6" id="playlist-songs"></div>
+             <div class="col-md-6" id="playlist-songs2"></div>
+
+            <!-- Handlebars template -->
+            <script id="playlist-songs-template" type="text/x-handlebars-template">
+              <ul class="list-group">
+                <li class="songs list-group-item">
+                  {{id}}. {{track}} by {{artist}}
+                <br></li>
+              </ul>
+            </script>
+    </div>
 
 
   
-    <div class="rect" id="red">
-      <footer>
+    <div class="morph" id="blue">
+      <footer id="footer">
           <div id="footer__container">
               <div id="footer__content">
                   <div class="row">
@@ -252,13 +266,14 @@
 
                 </div>
             </div>
+          </div>
         
             <!--/MODAL-->
         </section>
 
     
     <script src="./js/modal.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
