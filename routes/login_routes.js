@@ -35,10 +35,11 @@ module.exports = function (app) {
 
   const stateKey = 'spotify_auth_state';
 
+  let siteFrom;
 
-
-  app.get('/login', function (req, res) {
+  app.get('/login/:site', function (req, res) {
     const state = generateRandomString(16);
+    siteFrom = req.params.site;
     res.cookie(stateKey, state);
     // your application requests authorization
     const scope = 'streaming user-read-email user-read-private user-modify-playback-state playlist-modify-private playlist-modify-public';
@@ -103,7 +104,12 @@ module.exports = function (app) {
           });
 
           // we can also pass the token to the browser to make requests from there
+          if(siteFrom == 'shotify') {
           res.redirect('/');
+          }
+          else if(siteFrom == 'minutedj') {
+            res.redirect('/60seconddj')
+          }
         } else {
           res.redirect('/#' +
             querystring.stringify({
