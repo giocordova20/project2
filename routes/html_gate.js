@@ -7,7 +7,6 @@ listener event -- to the input of the user
 */
 
 var path = require("path");
-
 // Routes
 // =============================================================
 module.exports = function(app) {
