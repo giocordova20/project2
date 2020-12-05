@@ -181,7 +181,8 @@ function getSongs(id) {
     var template = Handlebars.compile(source);
 
     for (let i = 0; i < res.length; i++) {
-      
+      console.log('test');
+
         // Define our data object
         var songs = {
           "id": res[i].id,

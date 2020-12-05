@@ -120,6 +120,10 @@
     <div class="rect" id="green">
         <section class="section section-playlists" id="playlists">
             <h2>Playlists Go Here</h2>
+            <form class="form-inline my-2" id="js-playlist-form">
+                <input class="form-control mr-sm-2" for="search" type="search" id="js-playlist-input" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-lg-0" type="submit">Create Playlist</button>
+            </form>
             <p>Here is the heart of the 60SecondDJ application. Search songs and create your own specialized playlists to fill an hour listening enjoyment. Find and
                 select the songs you think will get your friends talking and laughing. Choose wisely! Don’t want to take the time to search and select
                 60 songs, get the party started with our pre-populated playlist that has been tested thoroughly by are staff and test participants. Click the
@@ -188,7 +192,22 @@
             </div>
         </section>
     </div>
-    <div class="rect" id="blue"></div>
+    <!-- Handlebars section -->
+    <div class="rect" id="blue">
+        <!-- Div to store handlebars -->
+               <div class="hidden col-md-6" id="playlist-songs"></div>
+               <div class="col-md-6" id="playlist-songs2"></div>
+  
+              <!-- Handlebars template -->
+              <script id="playlist-songs-template" type="text/x-handlebars-template">
+                <ul class="list-group">
+                  <li class="songs list-group-item">
+                    {{id}}. {{track}} by {{artist}}
+                  <br></li>
+                </ul>
+              </script>
+      </div>
+  
 
     <div class="rect" id="red">
         <footer>
