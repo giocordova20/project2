@@ -29,7 +29,7 @@ module.exports = function (app) {
     // };
 
     // Add a song to the playlist  // Need to get working. Will be called from a button
-    app.post("/api/:playlistid/:songs", function (req, res) {
+    app.post("/api/:playlistid", function (req, res) {
         db.playlist_content.create(req.body).then(function (response) {
             res.json(response);
         });
