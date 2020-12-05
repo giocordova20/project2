@@ -196,17 +196,6 @@ function getSongs(id) {
         // Add the compiled html to the page
         $("#playlist-songs").append(theCompiledHtml);
       
-      // if (i < 10) {
-      //   const card = $("<div>");
-      //   const cardBody = $("<div>");
-      //   card.addClass("Card");
-
-      //   cardBody.addClass("card-body");
-      //   cardBody.text(`${res[i].track} by ${res[i].artist}`);
-
-      //   card.append(cardBody);
-      //   songList.append(card);
-      // }
       playlistUri.push(res[i].spotify_uri);
     };
     console.log(playlistUri);
@@ -218,7 +207,7 @@ function setId() {
   getSongs(id);
 }
 
-
+// event listener for submit btn to get songs
 document.getElementById('js-search-form').addEventListener('submit', function (event) {
   event.preventDefault();
   $("#green").removeClass(".rect");
