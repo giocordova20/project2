@@ -47,8 +47,8 @@ text-shadow: 1px 1px 3px #808080;
 }
 
 #red{
-  background-color:rgb(148, 48, 48);
-  height: 5vh;
+  background: rgba(255, 255, 255, 0.3);
+  height: 10%;
 }
 
 
@@ -259,80 +259,51 @@ background-size: cover; */
   z-index: 999;
   height: 100%;
   width: 100%;
-  background-color: #111;
   overflow: visible;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 #footer__content{
   display: block;
   text-shadow: 2px 2px 4px #272727;
+  padding: 10px 10px;
   
 }
 
 #footer__logo{
-  float: right;
-  
-}
-
-.footer__list{
-  list-style-type: none;
-  padding: 0 auto;
-  margin: 0 auto;
-  width: 45%;
-}
-
-.box{
-  padding-left: 20vh;
-  list-style-type: none;
-}
-.footer__link{
-  color: rgb(54, 54, 54) !important;
-  align-items: center;
-  
-}
-
-.ic{
-  margin:10 auto;
-  width: 50%;
-  align-items: center;
-  justify-content: center;
-}
-
-#footer__head{
-  padding: 10px auto;
-  margin: 10px auto;
-  width: 20%;
-}
-
-
-.h_line { width:100%; height:1px; background: rgb(83, 83, 83); z-index: 999; }
-
-#copyright__container{
-  vertical-align: bottom;
-}
-
-p.copyright {
   position: absolute;
-  width: 100%;
-  color: #fff;
-  line-height: 40px;
-  font-size: 0.7em;
-  text-align: center;
-  bottom:0;
+  bottom: 0;
+  
 }
 
+#ic__container{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#ic{
+  text-align: center;
+  list-style: none;
+  bottom: 0;
+
+}
+
+#message{
+  bottom: 0;
+  text-align: center;
+}
+
+#copyright{
+  float: right;
+  padding-right: 12px;
+  bottom: 0;
+}
 
 
 @media only screen and (max-width: 870px) {
-  #footer__container{ 
-    background-color: lightblue;
-  }
   
-  p.box{
-    text-indent:2em;
-    list-style-type:disc;
-    display:list-item;
-    margin-left: 2em;
+  #copyright{
+    text-align: center;
   }
 }
 
