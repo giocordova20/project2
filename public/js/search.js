@@ -1,6 +1,6 @@
 
 
-document.getElementById('js-search-form').addEventListener('submit', function (event) {
+/*document.getElementById('js-search-form').addEventListener('submit', function (event) {
     event.preventDefault();
     let search = document.getElementById('js-search-input').value;
     if (search) {
@@ -19,5 +19,5 @@ document.getElementById('js-search-form').addEventListener('submit', function (e
             console.log(res);
 
         });*/
-    }
-});
+/*    }
+});*/
