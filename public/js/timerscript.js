@@ -3,8 +3,8 @@ var secondsElapsed = 0;
 var interval;
 
 let playlistUri = [];
-let access_token= "";
-function getKey(){
+let access_token = "";
+function getKey() {
   $.ajax({
     method: "GET",
     url: "/spotify/key",
@@ -50,7 +50,7 @@ function getFormattedSeconds() {
    getFormattedMinutes/Seconds() and the renderTime() function.
    It essentially resets our timer */
 function setTime() {
-  var minutes = 1; 
+  var minutes = 1;
   clearInterval(interval);
   totalSeconds = minutes * 60;
 };
@@ -75,7 +75,7 @@ function startTimer() {
 
 
 
-console.log(playlistUri);
+  console.log(playlistUri);
 
   $.ajax({
     method: "PUT",
@@ -83,14 +83,14 @@ console.log(playlistUri);
     headers: { 'Authorization': 'Bearer ' + access_token },
     data: JSON.stringify({
       "uris": playlistUri
- }),
+    }),
   }).then(function (res) {
     console.log(res);
   });
 
 
-// need to get song uris into array/object from the db 'spotify_uri' in playlist_contents
-// use the uri to keep track of the currently playing song to use for start/resume.
+  // need to get song uris into array/object from the db 'spotify_uri' in playlist_contents
+  // use the uri to keep track of the currently playing song to use for start/resume.
 
 
 
@@ -103,14 +103,14 @@ console.log(playlistUri);
       secondsElapsed++;
       console.log(secondsElapsed) // ** Remove before saving // **
 
-      if (secondsElapsed % 30 == 0){
+      if (secondsElapsed % 30 == 0) {
 
         console.log("\n\n\n\n NEXT SONG. DRINK!\n\n");
-        
-       $.ajax({
-         method: "POST",
-         url: "https://api.spotify.com/v1/me/player/next",
-         headers: {'Authorization': 'Bearer ' + access_token },
+
+        $.ajax({
+          method: "POST",
+          url: "https://api.spotify.com/v1/me/player/next",
+          headers: { 'Authorization': 'Bearer ' + access_token },
         }).then(function (res) {
           console.log(res);
         });
@@ -128,9 +128,10 @@ function pauseTimer() {
   $.ajax({
     method: "PUT",
     url: "https://api.spotify.com/v1/me/player/pause",
-    headers: {'Authorization': 'Bearer ' + access_token },
-    }).then(function (res) {
-   console.log(res);})
+    headers: { 'Authorization': 'Bearer ' + access_token },
+  }).then(function (res) {
+    console.log(res);
+  })
 
 
 
@@ -162,16 +163,29 @@ function getTimePreferences() {
 };
 
 function getSongs() {
+  playlistUri = [];
   let id = $(this).data('id');
+  const songList = $(".songs");
+  songList.empty();
   $.ajax({
     method: "GET",
     url: "/api/playlist/songs/" + id,
   }).then(function (res) {
     console.log(res[0]);
-    for(let i = 0; i < res.length; i++) {
-      
-        playlistUri.push(res[i].spotify_uri);
-      
+    for (let i = 0; i < res.length; i++) {
+      if (i < 10) {
+        const card = $("<div>");
+        const cardBody = $("<div>");
+        card.addClass("Card");
+
+        cardBody.addClass("card-body");
+        cardBody.text(`${res[i].track} by ${res[i].artist}`);
+
+        card.append(cardBody);
+        songList.append(card);
+      }
+      playlistUri.push(res[i].spotify_uri);
+
     }
     console.log(playlistUri);
   })
