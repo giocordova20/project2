@@ -173,13 +173,12 @@ function getSongs(id) {
     url: "/api/playlist/songs/" + id,
   }).then(function (res) {
     console.log(res[0]);
-
+    $("#playlist-songs").empty();
     // Grab the template script
     var source = $("#playlist-songs-template").html();
       
     // Compile the template
     var template = Handlebars.compile(source);
-
 
     for (let i = 0; i < res.length; i++) {
       
