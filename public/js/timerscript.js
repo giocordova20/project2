@@ -4,6 +4,7 @@ var interval;
 
 let playlistUri = [];
 let access_token = "";
+let activePlaylist;
 function getKey() {
   $.ajax({
     method: "GET",
@@ -162,9 +163,9 @@ function getTimePreferences() {
   renderTime();
 };
 
-function getSongs() {
+function getSongs(id) {
   playlistUri = [];
-  let id = $(this).data('id');
+  activePlaylist = id;
   const songList = $(".songs");
   songList.empty();
   $.ajax({
@@ -191,8 +192,45 @@ function getSongs() {
   })
 }
 
+function setId() {
+  let id = $(this).data('id');
+  getSongs(id);
+}
 
-$(document).on("click", ".playlist_btn", getSongs);
+
+document.getElementById('js-search-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  let search = document.getElementById('js-search-input').value;
+  if (search) {
+    $.ajax({
+      method: "GET",
+      url: "spotify/track/" + search,
+    }).then(function (res) {
+      console.log(res);
+      if (activePlaylist) {
+        let playlist = {
+          song_start_ms: 0,
+          track: res.name,
+          artist: res.artists[0].name,
+          order_in_playlist: 1,
+          image_href: "",
+          spotify_uri: res.uri,
+          playlistId: activePlaylist
+        };
+        $.post(`/api/${activePlaylist}`, playlist)
+          .then(function(res) {
+            console.log(res);
+            getSongs(activePlaylist)
+          });
+      }
+
+    });
+  }
+});
+
+
+
+$(document).on("click", ".playlist_btn", setId);
 
 $("#play").on("click", startTimer);
 $("#pause").on("click", pauseTimer);
